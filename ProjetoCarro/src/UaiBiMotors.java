@@ -2,22 +2,25 @@
 public class UaiBiMotors {
 	public static void main(String[] args) {
 		Carro c1, c2;
-		c1 = new Carro();
-		c2 = new Carro();
+		c1 = new Carro("Porsche","Cayenne",2022,"Branca",0,2200000);
+		c2 = new Carro("Chevrolet","Corsa",1998,"Cinza",250000,8000);
 		
-		c1.marca = "Porsche";
-		c1.modelo = "Cayenne";
-		c1.ano = 2024;
-		c1.km = 0;
-		c1.cor = "Branca";
-		c1.preco = 2200000;
+//		c1.setMarca ("Porsche");
+//		c1.setModelo ("Cayenne");
+//		c1.setAno (2024);
+//		c1.setKm (0);
+//		c1.setCor ("Branca");
+//		c1.setPreco (2200000);
+//		
+//		c2.setMarca ("Chevrolet");
+//		c2.setModelo ("Corsa");
+//		c2.setAno (1998);
+//		c2.setKm (250000);
+//		c2.setCor ("Cinza");
+//		c2.setPreco (8000);
 		
-		c2.marca = "Chevrolet";
-		c2.modelo = "Corsa";
-		c2.ano = 1998;
-		c2.km = 250000;
-		c2.cor = "Cinza";
-		c2.preco = 8000;
+
+
 		
 		c1.exibirAnuncio();
 		c1.SimularSeguro(2);

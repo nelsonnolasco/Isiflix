@@ -2,23 +2,81 @@
 public class Carro {
 	
 	//Características
-	String marca;
-	String modelo;
-	int ano;
-	String cor;
-	int km;
-	double preco;
+	private String marca;
+	private String modelo;
+	private int ano;
+	private String cor;
+	private int km;
+	private double preco;
 	
-	// Criar um "Botão" para que eu possa executar algo (mostrar os dados)
-	
-	void exibirAnuncio(){
-		
-		System.out.println("\n Anúncio do Carro \n" );
-		System.out.println(marca + "-" + modelo + " (" + ano + ")");
-		System.out.println("Cor: " + cor + "KM" + km + " R$ " + preco );
+	public Carro(String marca, String modelo, int ano, String cor, int km, double preco) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.cor = cor;
+		this.km = km;
+		this.preco = preco;
+				
 	}
 	
-	void SimularSeguro(int perfil) {
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public int getKm() {
+		return km;
+	}
+
+	public void setKm(int km) {
+		this.km = km;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+	
+	// Criar um "Botão" para que eu possa executar algo (mostrar os dados)
+	public void exibirAnuncio(){
+		
+		System.out.println("\n Anúncio do Carro \n" );
+		System.out.println(this.marca + "-" + this.modelo + " (" + this.ano + ")");
+		System.out.println("Cor: " + this.cor + "KM" + this.km + " R$ " + this.preco );
+	}
+	
+	public void SimularSeguro(int perfil) {
 		if (perfil ==0) {
 			System.out.println("Perfil: Idoso - 1,5%");
 			System.out.println("R$ " + preco * 0.025);
@@ -37,7 +95,7 @@ public class Carro {
 				
 	}
 	
-	double calcularIPVA(){
+	public double calcularIPVA(){
 		double valorIPVA;
 		if (ano <= 2002) {
 			valorIPVA = 0;
